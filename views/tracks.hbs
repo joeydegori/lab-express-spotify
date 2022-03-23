@@ -1,0 +1,22 @@
+{{!-- <div class="container">
+    {{#each tracks}}
+    <div class="card">
+        <h4>{{this.name}}</h4>
+        <audio controls src="{{this.preview_url}}"></audio>
+
+        <audio controls>
+            <source src="{{this.preview_url}}" type="audio/ogg">
+            <source src="{{this.preview_url}}" type="audio/mpeg">
+        </audio>
+        {{!-- <img src={{this.images.[2].url}} alt="image">
+        <p>{{this.name}}</p>
+        <a href="/tracks/{{this.id}}"><button>View Tracks</button></a> --}}
+    {{!-- </div>
+    {{/each}}
+</div> --}} 
+
+{{#each tracks}}
+    {{this.name}}
+    <audio controls src={{"this.preview_url"}}>
+    </audio>
+{{/each}}

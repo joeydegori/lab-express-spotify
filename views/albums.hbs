@@ -1,0 +1,21 @@
+{{!-- <div class="container">
+    {{#each albums}}
+    <div class="card">
+        <img src={{this.images.[2].url}} alt="image">
+        <p>{{this.name}}</p>
+        <a href="/tracks/{{this.id}}"><button>View Tracks</button></a>
+    </div>
+    {{/each}}
+</div> --}}
+
+<div class="container">
+    {{#each albums}}
+    <iframe src="https://open.spotify.com/embed/album/{{this.id}}" 
+    width="300" 
+    height="380" 
+    frameborder="0" 
+    allowtransparency="true" 
+    allow="encrypted-media">
+    </iframe>
+    {{/each}}
+</div>
