@@ -1,3 +1,5 @@
+
+{{!Idk what this is}}
 {{!-- <div class="container">
     {{#each tracks}}
     <div class="card">
@@ -7,16 +9,40 @@
         <audio controls>
             <source src="{{this.preview_url}}" type="audio/ogg">
             <source src="{{this.preview_url}}" type="audio/mpeg">
-        </audio>
-        {{!-- <img src={{this.images.[2].url}} alt="image">
-        <p>{{this.name}}</p>
-        <a href="/tracks/{{this.id}}"><button>View Tracks</button></a> --}}
-    {{!-- </div>
-    {{/each}}
-</div> --}} 
+        </audio> 
 
-{{#each tracks}}
+
+  <img src={{this.images.[2].url}} alt="image">
+        <p>{{this.name}}</p>
+        <a href="/tracks/{{this.id}}"><button>View Tracks</button></a> 
+    </div>
+    {{/each}}
+</div>  --}}
+
+
+{{! the second way of putting on screen not original}}
+{{!-- {{#each tracks}}
     {{this.name}}
     <audio controls src={{"this.preview_url"}}>
     </audio>
-{{/each}}
+{{/each}}  --}}
+
+
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Listen</th>
+  </tr>
+  {{#each tracks}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>
+        <audio controls>
+          src={{this.preview_url}}>
+        </audio>
+      </td>
+    </tr>
+  {{/each}}
+</table>  
